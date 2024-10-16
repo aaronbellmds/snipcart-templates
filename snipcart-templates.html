@@ -7,21 +7,19 @@
 </head>
 <body>
     <div id="snipcart-templates">
-        <!-- Override the "Full Name" field label -->
-        <billing section="top">
+        <!-- Override the Full Name field using overridable -->
+        <overridable name="billing">
             <fieldset class="snipcart-form__set">
-                <!-- Update label for Full Name -->
                 <div class="snipcart-form__field">
-                    <snipcart-label
-                        class="snipcart__font--tiny"
-                        for="name">
+                    <!-- Update the label for Full Name to Payee Name -->
+                    <snipcart-label class="snipcart__font--tiny" for="name">
                         Payee Name
                     </snipcart-label>
-                    <snipcart-input name="name"></snipcart-input> <!-- Keep the original input unchanged -->
-                    <snipcart-error-message name="name"></snipcart-error-message> <!-- Keep error handling intact -->
+                    <snipcart-input name="name"></snipcart-input>
+                    <snipcart-error-message name="name"></snipcart-error-message>
                 </div>
             </fieldset>
-        </billing>
+        </overridable>
     </div>
 </body>
 </html>
