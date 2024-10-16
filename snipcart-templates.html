@@ -3,33 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snipcart Custom Fields</title>
+    <title>Snipcart Custom Templates</title>
 </head>
 <body>
     <div id="snipcart-templates">
-        <!-- Custom Billing Form Fields -->
+        <!-- Override the Full Name field and rename it to Payee Name -->
         <billing section="top">
-            <div>
-                <fieldset class="snipcart-form__set">
-                    <!-- Custom Payee Name Field -->
-                    <div class="snipcart-customer-details snipcart__box">
-                        <!-- Header -->
-                        <div class="snipcart-customer-details__header snipcart__box--header">
-                            <div class="snipcart__box--title">
-                                <h1 class="snipcart-customer-details__title snipcart__font--subtitle">
-                                    {{ $localize('customer_details.title') }}
-                                </h1>
-                            </div>
-                        </div>
-                    
-                        <!-- Basic infos -->
-                        <div class="snipcart-customer-details__infos snipcart__font--std">
-                            {{ customer.billingAddress.name  }}
-                            <br v-if="customer.billingAddress.name" />
-                            {{ customer.email }}
-                        </div>
-                </fieldset>
-            </div>
+            <fieldset class="snipcart-form__set">
+                <!-- Rename Full Name field to Payee Name -->
+                <div class="snipcart-form__field">
+                    <snipcart-label for="payeeName">Payee Name</snipcart-label>
+                    <snipcart-input name="payeeName" required></snipcart-input> <!-- This field is mandatory -->
+                </div>
+                <!-- Add a custom Person Attending field -->
+                <div class="snipcart-form__field">
+                    <snipcart-label for="personAttending">Person Attending</snipcart-label>
+                    <snipcart-input name="personAttending" required></snipcart-input> <!-- This field is also mandatory -->
+                </div>
+            </fieldset>
         </billing>
     </div>
 </body>
