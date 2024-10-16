@@ -7,23 +7,26 @@
 </head>
 <body>
     <div id="snipcart-templates">
-        <!-- Override the billing name field and rename it to Payee Name -->
-        <billing section="top">
+        <!-- Override the billing fields to customize the Full Name field -->
+        <address-fields section="top">
             <fieldset class="snipcart-form__set">
-                <!-- Rename Full Name field to Payee Name -->
+                <!-- Replace Full Name with Payee Name -->
                 <div class="snipcart-form__field">
-                    <label class="snipcart-form__label snipcart__font--tiny" for="name_d28346d6-784b-4a1a-bd4d-60ff52d17d44">Payee Name</label>
-                        <div class="snipcart-input">
-                            <input id="name_d28346d6-784b-4a1a-bd4d-60ff52d17d44" name="name" type="text" class="snipcart-input__input snipcart__font--secondary snipcart__font--bold" required>
-                        </div>
+                    <snipcart-label for="payeeName">
+                        Payee Name
+                    </snipcart-label>
+                    <snipcart-input name="payeeName" required></snipcart-input>
                 </div>
-                <!-- Keep the custom Person Attending field as is -->
+
+                <!-- Keep Person Attending Field as is -->
                 <div class="snipcart-form__field">
-                    <snipcart-label for="personAttending">Person Attending</snipcart-label>
-                    <snipcart-input name="personAttending" required></snipcart-input> <!-- This field is mandatory as well -->
+                    <snipcart-label for="personAttending">
+                        Person Attending
+                    </snipcart-label>
+                    <snipcart-input name="personAttending" required></snipcart-input>
                 </div>
             </fieldset>
-        </billing>
+        </address-fields>
     </div>
 </body>
 </html>
