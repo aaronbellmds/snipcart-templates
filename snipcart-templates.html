@@ -8,8 +8,8 @@ i<!DOCTYPE html>
 <body>
     <div id="snipcart-templates">
         <!-- Override the Full Name field and rename it to Payee Name -->
-        <billing section="top">
-            <overridable class="snipcart-form__set">
+        <overridable section="top">
+            <fieldset class="snipcart-form__set">
                 <!-- Rename Full Name field to Payee Name -->
                 <div class="snipcart-form__field">
                     <snipcart-label for="payeeName">Payee Name</snipcart-label>
@@ -20,8 +20,8 @@ i<!DOCTYPE html>
                     <snipcart-label for="personAttending">Person Attending</snipcart-label>
                     <snipcart-input name="personAttending" required></snipcart-input> <!-- This field is also mandatory -->
                 </div>
-            </overridable>
-        </billing>
+            </fieldset>
+        </overridable>
     </div>
 </body>
 </html>
