@@ -1,21 +1,35 @@
-i<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snipcart Custom Templates</title>
+    <title>Snipcart Custom Fields</title>
 </head>
 <body>
     <div id="snipcart-templates">
-        <!-- Override the Full Name field and rename it to Payee Name -->
-        <billing section="middle">
-            <fieldset class="snipcart-form__set">
-                <!-- Rename Full Name field to Payee Name -->
-                <div class="snipcart-form__field">
-                    <snipcart-label for="payeeName">Payee Name</snipcart-label>
-                    <snipcart-input name="payeeName" required></snipcart-input> <!-- This field is mandatory -->
-                </div>
-            </fieldset>
+        <!-- Custom Billing Form Fields -->
+        <billing section="top">
+            <div>
+                <fieldset class="snipcart-form__set">
+                    <!-- Custom Payee Name Field -->
+                    <div class="snipcart-customer-details snipcart__box">
+                        <!-- Header -->
+                        <div class="snipcart-customer-details__header snipcart__box--header">
+                            <div class="snipcart__box--title">
+                                <h1 class="snipcart-customer-details__title snipcart__font--subtitle">
+                                    {{ $localize('customer_details.title') }}
+                                </h1>
+                            </div>
+                        </div>
+                    
+                        <!-- Basic infos -->
+                        <div class="snipcart-customer-details__infos snipcart__font--std">
+                            {{ customer.billingAddress.name  }}
+                            <br v-if="customer.billingAddress.name" />
+                            {{ customer.email }}
+                        </div>
+                </fieldset>
+            </div>
         </billing>
     </div>
 </body>
