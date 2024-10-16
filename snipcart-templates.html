@@ -3,23 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snipcart Custom Templates</title>
+    <title>Snipcart Custom Fields</title>
 </head>
 <body>
     <div id="snipcart-templates">
-        <!-- Override the Full Name field using overridable -->
-        <overridable name="billing">
-            <fieldset class="snipcart-form__set">
-                <div class="snipcart-form__field">
-                    <!-- Update the label for Full Name to Payee Name -->
-                    <snipcart-label class="snipcart__font--tiny" for="name">
-                        Payee Name
-                    </snipcart-label>
-                    <snipcart-input name="name"></snipcart-input>
-                    <snipcart-error-message name="name"></snipcart-error-message>
-                </div>
-            </fieldset>
-        </overridable>
+        <!-- Custom Billing Form Fields -->
+        <billing section="top">
+            <div>
+                <fieldset class="snipcart-form__set">
+                    <!-- Custom Payee Name Field -->
+                    <div class="snipcart-form__field">
+                        <snipcart-label class="snipcart__font--tiny" for="payeeName">
+                            Payee Name
+                        </snipcart-label>
+                        <snipcart-input name="payeeName" required></snipcart-input>
+                        <snipcart-error-message name="payeeName"></snipcart-error-message>
+                    </div>
+
+                    <!-- Custom Person Attending Field -->
+                    <div class="snipcart-form__field">
+                        <snipcart-label class="snipcart__font--tiny" for="personAttending">
+                            Person Attending
+                        </snipcart-label>
+                        <snipcart-input name="personAttending" required></snipcart-input>
+                        <snipcart-error-message name="personAttending"></snipcart-error-message>
+                    </div>
+                </fieldset>
+            </div>
+        </billing>
     </div>
 </body>
 </html>
