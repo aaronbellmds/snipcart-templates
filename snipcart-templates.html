@@ -8,17 +8,12 @@ i<!DOCTYPE html>
 <body>
     <div id="snipcart-templates">
         <!-- Override the Full Name field and rename it to Payee Name -->
-        <billing section="top">
+        <billing section="middle">
             <fieldset class="snipcart-form__set">
                 <!-- Rename Full Name field to Payee Name -->
                 <div class="snipcart-form__field">
                     <snipcart-label for="payeeName">Payee Name</snipcart-label>
                     <snipcart-input name="payeeName" required></snipcart-input> <!-- This field is mandatory -->
-                </div>
-                <!-- Add a custom Person Attending field -->
-                <div class="root">
-                    <snipcart-label class="snipcart-form__label snipcart__font--tiny">Person Attending</snipcart-label>
-                    <snipcart-input name="name" required></snipcart-input> <!-- This field is also mandatory -->
                 </div>
             </fieldset>
         </billing>
