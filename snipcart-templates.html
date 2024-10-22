@@ -7,28 +7,30 @@
 </head>
 <body>
     <div id="snipcart-templates">
-        <!-- Override the name and email fields section inside snipcart__box -->
-        <override selector=".snipcart__box fieldset.snipcart-form__set:first-of-type">
-            <fieldset class="snipcart-form__set">
-                <!-- Payee Name Field (replaces Full Name) -->
-                <div class="snipcart-form__field">
-                    <snipcart-label for="payeeName">Payee Name</snipcart-label>
-                    <snipcart-input name="payeeName" type="text" id="payeeName" required></snipcart-input>
-                </div>
+        <!-- Override the billing component to modify Full Name and Email fields -->
+        <billing section="top">
+            <div>
+                <fieldset class="snipcart-form__set">
+                    <!-- Payee Name Field (Replaces Full Name) -->
+                    <div class="snipcart-form__field">
+                        <snipcart-label for="payeeName">Payee Name</snipcart-label>
+                        <snipcart-input name="payeeName" type="text" id="payeeName" required></snipcart-input>
+                    </div>
 
-                <!-- Person Attending Field (added below Payee Name) -->
-                <div class="snipcart-form__field">
-                    <snipcart-label for="attendeeName">Person Attending</snipcart-label>
-                    <snipcart-input name="attendeeName" type="text" id="attendeeName" required></snipcart-input>
-                </div>
+                    <!-- Person Attending Field (New Field) -->
+                    <div class="snipcart-form__field">
+                        <snipcart-label for="attendeeName">Person Attending</snipcart-label>
+                        <snipcart-input name="attendeeName" type="text" id="attendeeName" required></snipcart-input>
+                    </div>
 
-                <!-- Email Field (kept unchanged) -->
-                <div class="snipcart-form__field">
-                    <snipcart-label for="email">Email</snipcart-label>
-                    <snipcart-input name="email" type="email" id="email" required></snipcart-input>
-                </div>
-            </fieldset>
-        </override>
+                    <!-- Email Field (Kept Unchanged) -->
+                    <div class="snipcart-form__field">
+                        <snipcart-label for="email">Email</snipcart-label>
+                        <snipcart-input name="email" type="email" id="email" required></snipcart-input>
+                    </div>
+                </fieldset>
+            </div>
+        </billing>
     </div>
 </body>
 </html>
