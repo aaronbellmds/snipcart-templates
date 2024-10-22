@@ -7,8 +7,8 @@
 </head>
 <body>
 <div id="snipcart-templates">
-    <!-- Override only the customer fields section, which includes the Name and Email fields -->
-    <customer-fields>
+    <!-- Override the billing fields section with the <override> tag -->
+    <override selector="[data-component='billing-fields']">
         <div>
             <fieldset class="snipcart-form__set">
                 <!-- Payee Name Field -->
@@ -30,7 +30,7 @@
                 </div>
             </fieldset>
         </div>
-    </customer-fields>
+    </override>
 </div>
 </body>
 </html>
