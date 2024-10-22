@@ -7,26 +7,21 @@
 </head>
 <body>
     <div id="snipcart-templates">
-        <!-- Override only the fieldset for Full Name and Email -->
-        <fieldset class="snipcart-form__set" data-component="billing-address">
-            <!-- Payee Name Field (Replaces Full Name) -->
-            <div class="snipcart-form__field">
-                <snipcart-label for="payeeName">Payee Name</snipcart-label>
-                <snipcart-input name="payeeName" type="text" id="payeeName" required></snipcart-input>
-            </div>
-
-            <!-- Person Attending Field (New Field) -->
-            <div class="snipcart-form__field">
-                <snipcart-label for="attendeeName">Person Attending</snipcart-label>
-                <snipcart-input name="attendeeName" type="text" id="attendeeName" required></snipcart-input>
-            </div>
-
-            <!-- Email Field (Kept Unchanged) -->
-            <div class="snipcart-form__field">
-                <snipcart-label for="email">Email</snipcart-label>
-                <snipcart-input name="email" type="email" id="email" required></snipcart-input>
-            </div>
-        </fieldset>
+        <!-- Test Override to Change Label -->
+        <billing section="top">
+            <fieldset class="snipcart-form__set">
+                <!-- Change Full Name to TEST LABEL -->
+                <div class="snipcart-form__field">
+                    <snipcart-label for="name">TEST LABEL</snipcart-label>
+                    <snipcart-input name="name" type="text" required></snipcart-input>
+                </div>
+                <!-- Keep Email Unchanged -->
+                <div class="snipcart-form__field">
+                    <snipcart-label for="email">Email</snipcart-label>
+                    <snipcart-input name="email" type="email" required></snipcart-input>
+                </div>
+            </fieldset>
+        </billing>
     </div>
 </body>
 </html>
