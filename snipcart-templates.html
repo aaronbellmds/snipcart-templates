@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snipcart Custom Templates</title>
+</head>
+<body>
+    <div id="snipcart-templates">
+        <!-- Override the name and email fields section inside snipcart__box -->
+        <override selector=".snipcart__box fieldset.snipcart-form__set:first-of-type">
+            <fieldset class="snipcart-form__set">
+                <!-- Payee Name Field (replaces Full Name) -->
+                <div class="snipcart-form__field">
+                    <snipcart-label for="payeeName">Payee Name</snipcart-label>
+                    <snipcart-input name="payeeName" type="text" id="payeeName" required></snipcart-input>
+                </div>
 
+                <!-- Person Attending Field (added below Payee Name) -->
+                <div class="snipcart-form__field">
+                    <snipcart-label for="attendeeName">Person Attending</snipcart-label>
+                    <snipcart-input name="attendeeName" type="text" id="attendeeName" required></snipcart-input>
+                </div>
+
+                <!-- Email Field (kept unchanged) -->
+                <div class="snipcart-form__field">
+                    <snipcart-label for="email">Email</snipcart-label>
+                    <snipcart-input name="email" type="email" id="email" required></snipcart-input>
+                </div>
+            </fieldset>
+        </override>
+    </div>
+</body>
+</html>
