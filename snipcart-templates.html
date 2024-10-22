@@ -6,31 +6,27 @@
     <title>Snipcart Custom Templates</title>
 </head>
 <body>
-<div id="snipcart-templates">
-    <!-- Override the billing fields section with the <override> tag -->
-    <override selector="[data-component='billing-fields']">
-        <div>
+    <div id="snipcart-templates">
+        <!-- Override the billing section fields -->
+        <billing section="top">
             <fieldset class="snipcart-form__set">
-                <!-- Payee Name Field -->
+                <!-- Rename Full Name field to Payee Name -->
                 <div class="snipcart-form__field">
                     <snipcart-label for="payeeName">Payee Name</snipcart-label>
-                    <snipcart-input name="payeeName" type="text" id="payeeName"></snipcart-input>
+                    <snipcart-input name="payeeName" required></snipcart-input> <!-- This field is mandatory -->
                 </div>
-
-                <!-- Person Attending Field (formerly Full Name) -->
+                <!-- Add a custom Person Attending field -->
                 <div class="snipcart-form__field">
                     <snipcart-label for="attendeeName">Person Attending</snipcart-label>
-                    <snipcart-input name="attendeeName" type="text" id="attendeeName"></snipcart-input>
+                    <snipcart-input name="attendeeName" required></snipcart-input> <!-- This field is also mandatory -->
                 </div>
-
-                <!-- Email Field -->
+                <!-- Email Field remains unchanged -->
                 <div class="snipcart-form__field">
                     <snipcart-label for="email">Email</snipcart-label>
-                    <snipcart-input name="email" type="email" id="email"></snipcart-input>
+                    <snipcart-input name="email" type="email" required></snipcart-input>
                 </div>
             </fieldset>
-        </div>
-    </override>
-</div>
+        </billing>
+    </div>
 </body>
 </html>
