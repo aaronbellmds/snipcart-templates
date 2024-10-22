@@ -11,7 +11,7 @@
         <billing section="top">
             <fieldset class="snipcart-form__set">
                 <!-- Rename Full Name field to Payee Name -->
-                <div class="snipcart-form__field">
+                <override class="snipcart-form__field">
                     <snipcart-label for="payeeName">Payee Name</snipcart-label>
                     <snipcart-input name="payeeName" required></snipcart-input> <!-- This field is mandatory -->
                 </div>
@@ -24,7 +24,7 @@
                 <div class="snipcart-form__field">
                     <snipcart-label for="email">Email</snipcart-label>
                     <snipcart-input name="email" type="email" required></snipcart-input>
-                </div>
+                </override>
             </fieldset>
         </billing>
     </div>
