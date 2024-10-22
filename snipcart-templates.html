@@ -6,18 +6,31 @@
     <title>Snipcart Custom Templates</title>
 </head>
 <body>
-    <div id="snipcart-templates">
-        <!-- Override the Full Name field and rename it to Payee Name -->
-        <billing section="top">
+<div id="snipcart-templates">
+    <address-fields>
+        <div>
             <fieldset class="snipcart-form__set">
+                <!-- Payee Name Field -->
                 <div class="snipcart-form__field">
-                    <snipcart-label class="snipcart__font--tiny" for="payeeName">
-                        Payee Name
-                    </snipcart-label>
-                    <snipcart-input name="payeeName"></snipcart-input>
+                    <snipcart-label for="payeeName">Payee Name</snipcart-label>
+                    <snipcart-input name="payeeName" type="text"></snipcart-input>
+                </div>
+
+                <!-- Person Attending Field (formerly Full Name) -->
+                <div class="snipcart-form__field">
+                    <snipcart-label for="attendeeName">Person Attending</snipcart-label>
+                    <snipcart-input name="attendeeName" type="text"></snipcart-input>
+                </div>
+
+                <!-- Email Field -->
+                <div class="snipcart-form__field">
+                    <snipcart-label for="email">Email</snipcart-label>
+                    <snipcart-input name="email" type="email"></snipcart-input>
                 </div>
             </fieldset>
-        </billing>
-    </div>
+        </div>
+    </address-fields>
+</div>
+
 </body>
 </html>
