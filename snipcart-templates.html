@@ -7,27 +7,60 @@
 </head>
 <body>
     <div id="snipcart-templates">
-        <!-- Billing override for Full Name and Email Fields -->
-        <billing section="top">
-            <fieldset class="snipcart-form__set">
-                <!-- Replace Full Name with Payee Name -->
-                <div class="snipcart-form__field">
-                    <snipcart-label for="payeeName">Payee Name</snipcart-label>
-                    <snipcart-input name="payeeName" type="text" id="payeeName" required></snipcart-input>
-                </div>
+        <!-- Completely override the billing component to replace fields properly -->
+        <billing>
+            <div>
+                <fieldset class="snipcart-form__set">
+                    <!-- Payee Name Field -->
+                    <div class="snipcart-form__field">
+                        <snipcart-label for="payeeName">Payee Name</snipcart-label>
+                        <snipcart-input name="payeeName" type="text" id="payeeName" required></snipcart-input>
+                    </div>
 
-                <!-- Add Person Attending Field (new field) -->
-                <div class="snipcart-form__field">
-                    <snipcart-label for="attendeeName">Person Attending</snipcart-label>
-                    <snipcart-input name="attendeeName" type="text" id="attendeeName" required></snipcart-input>
-                </div>
+                    <!-- Person Attending Field -->
+                    <div class="snipcart-form__field">
+                        <snipcart-label for="attendeeName">Person Attending</snipcart-label>
+                        <snipcart-input name="attendeeName" type="text" id="attendeeName" required></snipcart-input>
+                    </div>
 
-                <!-- Email Field Override to make sure it is targeted -->
-                <div class="snipcart-form__field">
-                    <snipcart-label for="email">Email</snipcart-label>
-                    <snipcart-input name="email" type="email" id="email" required></snipcart-input>
-                </div>
-            </fieldset>
+                    <!-- Email Field -->
+                    <div class="snipcart-form__field">
+                        <snipcart-label for="email">Email</snipcart-label>
+                        <snipcart-input name="email" type="email" id="email" required></snipcart-input>
+                    </div>
+
+                    <!-- Address Fields -->
+                    <div class="snipcart-form__field">
+                        <snipcart-label for="address1">Street address</snipcart-label>
+                        <snipcart-input name="address1" type="text" id="address1" required></snipcart-input>
+                    </div>
+
+                    <div class="snipcart-form__field snipcart-form__cell--tidy">
+                        <snipcart-label for="address2">Apt/Suite</snipcart-label>
+                        <snipcart-input name="address2" type="text" id="address2"></snipcart-input>
+                    </div>
+
+                    <div class="snipcart-form__field">
+                        <snipcart-label for="city">City</snipcart-label>
+                        <snipcart-input name="city" type="text" id="city" required></snipcart-input>
+                    </div>
+
+                    <div class="snipcart-form__field">
+                        <snipcart-label for="country">Country</snipcart-label>
+                        <snipcart-typeahead type="dropdown" name="country" id="country" required></snipcart-typeahead>
+                    </div>
+
+                    <div class="snipcart-form__field snipcart-form__cell--large">
+                        <snipcart-label for="province">Province/State</snipcart-label>
+                        <snipcart-input name="province" type="text" id="province"></snipcart-input>
+                    </div>
+
+                    <div class="snipcart-form__field snipcart-form__cell--tidy">
+                        <snipcart-label for="postalCode">Postal/ZIP code</snipcart-label>
+                        <snipcart-input name="postalCode" type="text" id="postalCode" required></snipcart-input>
+                    </div>
+                </fieldset>
+            </div>
         </billing>
     </div>
 </body>
