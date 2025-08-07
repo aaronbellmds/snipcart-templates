@@ -7,63 +7,15 @@
 </head>
 <body>
     <div id="snipcart-templates">
-      <billing>
-        <fieldset class="snipcart-form__set">
-          <!-- Custom Person Attending Field -->
-          <div class="snipcart-form__field">
-            <snipcart-label for="person-attending">Person attending</snipcart-label>
-            <snipcart-input name="person-attending" type="text" id="person-attending" required></snipcart-input>
-          </div>
-
-          <!-- Payee Name (built-in) -->
-          <div class="snipcart-form__field">
-            <snipcart-label for="name">Payee name</snipcart-label>
-            <snipcart-input name="name" id="name" required></snipcart-input>
-          </div>
-
-          <!-- Email -->
-          <div class="snipcart-form__field">
-            <snipcart-label for="email">Email</snipcart-label>
-            <snipcart-input name="email" type="email" id="email" required></snipcart-input>
-          </div>
-
-          <!-- STREET NAME (this was previously labelled "Unit Number") -->
-          <div class="snipcart-form__field snipcart-form__cell--large snipcart-form__address-autocomplete">
-            <snipcart-label for="address1">Street number and name</snipcart-label>
-            <snipcart-input name="address1" id="address1" required></snipcart-input>
-          </div>
-
-          <!-- UNIT NUMBER (this was previously "Street number and name") -->
-          <div class="snipcart-form__field snipcart-form__cell--tidy">
-            <snipcart-label for="address2">Unit Number (if applicable)</snipcart-label>
-            <snipcart-input name="address2" id="address2"></snipcart-input>
-          </div>
-
-          <!-- Suburb -->
-          <div class="snipcart-form__field">
-            <snipcart-label for="city">Suburb</snipcart-label>
-            <snipcart-input name="city" id="city" required></snipcart-input>
-          </div>
-
-          <!-- Country -->
-          <div class="snipcart-form__field">
-            <snipcart-label for="country">Country</snipcart-label>
-            <snipcart-typeahead type="country" name="country" id="country" required></snipcart-typeahead>
-          </div>
-
-          <!-- State -->
-          <div class="snipcart-form__field">
-            <snipcart-label for="province">State</snipcart-label>
-            <snipcart-typeahead type="province" name="province" id="province" required></snipcart-typeahead>
-          </div>
-
-          <!-- Postcode -->
-          <div class="snipcart-form__field">
-            <snipcart-label for="postalCode">Postcode</snipcart-label>
-            <snipcart-input name="postalCode" id="postalCode" required></snipcart-input>
-          </div>
-        </fieldset>
-      </billing>
+        <!-- Add Payee Name Field -->
+        <billing section="top">
+            <fieldset class="snipcart-form__set">
+                <div class="snipcart-form__field">
+                    <snipcart-label for="person-attending">Person attending</snipcart-label>
+                    <snipcart-input name="person-attending" type="text" id="person-attending" required></snipcart-input>
+                </div>
+            </fieldset>
+        </billing>
     </div>
 </body>
 </html>
